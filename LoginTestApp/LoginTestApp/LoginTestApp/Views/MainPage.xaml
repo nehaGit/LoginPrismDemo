@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="LoginTestApp.Views.MainPage"
+             Title="MainPage" BackgroundColor="Silver">
+  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="20" Spacing="20">
+  <BoxView HeightRequest="200" HorizontalOptions="FillAndExpand" Color="{Binding Color}" />
+
+  <Slider x:Name="slider1" Maximum="255" Value="{Binding Hue}" />
+   <Slider x:Name="slider2" Maximum="255"   Value="{Binding Saturation}"  HorizontalOptions="FillAndExpand"/>
+    <Slider x:Name="slider3" Maximum="255"  Value="{Binding Lumonisity}"   HorizontalOptions="FillAndExpand"/>
+      </StackLayout>
+</ContentPage>

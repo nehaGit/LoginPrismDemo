@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LoginTestApp;assembly=LoginTestApp"
+             x:Class="LoginTestApp.Views.LoginPage">
+
+  <StackLayout Padding="20">
+  
+    <Entry x:Name="txtName" Placeholder="email"  Text="{Binding user.Email}" >
+     <Entry.Behaviors>
+        <local:EmailValidationBehavior />
+    </Entry.Behaviors>
+
+    </Entry>
+    <Entry x:Name="txtPwd" Placeholder="password"  Text="{Binding user.Password}" IsPassword="true" />
+    <Button Text="Login" Command="{Binding LoginCommand}" />
+  </StackLayout>
+</ContentPage>
